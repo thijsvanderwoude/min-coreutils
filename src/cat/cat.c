@@ -76,6 +76,10 @@ int main(int argc, char **argv) {
 				break;
 			}
 			wr = write(standardOut, buffer, 1);
+			if (wr == -1) {
+				fprintf(stderr, "%s: error: %s\n", PN, strerror(errno));
+				exit(EXIT_FAILURE);
+			}
 		}
 		fclose(file);
 	}
