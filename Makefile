@@ -1,3 +1,6 @@
+CC = gcc
+CARGS = -Os
+
 all: build
 
 build: mkdir cat uname cloc
@@ -13,7 +16,7 @@ clean:
 	rm -rf bin
 
 cat:
-	gcc src/cat/cat.c -o bin/cat
+	$(CC) $(CARGS) src/cat/cat.c -o bin/cat
 
 uname:
-	gcc src/uname/uname.c -o bin/uname
+	$(CC) $(CARGS) src/uname/uname.c -o bin/uname
