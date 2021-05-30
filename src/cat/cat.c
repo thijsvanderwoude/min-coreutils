@@ -1,19 +1,10 @@
 /*
- *  A minimalist cat implementation.
- *  Copyright (C) <year>  <name of author>
+ * cat.c
+ * -----
+ * A minimalist cat implementation.
  *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * Copyright 2021 Thijs van der Woude
+ * This program is licensed under the 3-clause BSD License. See the LICENSE file.
  */
 
 #include <errno.h>
@@ -21,6 +12,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+
+#include "../license.h"
 
 #define PN "cat"
 #define HELP "Usage: cat [option(s)] [file(s)]\nFunction: concatenates file(s) to standard output.\n\nIf no FILE(S) OR if FILE is - read standard input.\n\n-h\thelp\n-u\twrite byte by byte (ignored, standard operation)\n"
@@ -47,6 +40,7 @@ int main(int argc, char **argv) {
 					switch (argv[i][1]) {
 						case 'h':
 							fprintf(stdout, HELP);
+							fprintf(stdout, LICENSE);
 							exit(EXIT_SUCCESS);
 						case 'u':
 							break;

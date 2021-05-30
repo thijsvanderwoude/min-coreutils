@@ -1,20 +1,10 @@
 /*
- *  A minimalist uname implementation.
- *  Copyright (C) 2021  Thijs van der Woude
+ * uname.c
+ * -------
+ * A minimalist uname implementation.
  *
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
- *
+ * Copyright 2021 Thijs van der Woude
+ * This program is licensed under the 3-clause BSD License. See the LICENSE file.
  */
 
 #include <errno.h>
@@ -24,6 +14,8 @@
 #include <unistd.h>
 
 #include <sys/utsname.h>
+
+#include "../license.h"
 
 #define PN "uname"
 #define HELP "Usage: uname [option(s)]\nFunction: display system information.\nIf no option(s), -s is used.\n\n-h\thelp\n-a\tall possible options\n-m\thardware type\n-n\tnetwork node hostname\n-r\tkernel release\n-s\tkernel name\n-v\tOS version level\n"
@@ -46,6 +38,7 @@ int main(int argc, char **argv) {
         switch (opt) {
             case 'h':
                 fprintf(stdout, HELP);
+                fprintf(stdout, LICENSE);
 				exit(EXIT_SUCCESS);
             case 'a':
                 printf(
