@@ -11,7 +11,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#define HELP "Usage: pwd [option]\nFunction: prints the current working directory\n\n-h\thelp\n-L\tlogical path, standard operation\n-P\t\n"
+#define HELP "Usage: pwd [option]\nFunction: prints the current working directory\n\n-h\thelp\n-L\tlogical path, standard operation\n-P\tPWD environment variable\n"
 #define OPTIONS "hLP"
 
 int main(int argc, char **argv) {
