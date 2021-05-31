@@ -11,6 +11,7 @@ Source: https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap04.htm
 
 Available implementations:
 - [x] cat
-- [ ] cp 
+- [ ] cp
 - [ ] ls
+- [x] pwd
 - [x] uname
