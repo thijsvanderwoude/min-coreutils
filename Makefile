@@ -3,7 +3,7 @@ CARGS = -Os
 
 all: build
 
-build: mkdir cat uname cloc
+build: mkdir cat pwd uname
 
 mkdir:
 	rm -rf bin
@@ -17,6 +17,9 @@ clean:
 
 cat:
 	$(CC) $(CARGS) src/cat/cat.c -o bin/cat
+
+pwd:
+	$(CC) $(CARGS) src/pwd/pwd.c -o bin/pwd
 
 uname:
 	$(CC) $(CARGS) src/uname/uname.c -o bin/uname
