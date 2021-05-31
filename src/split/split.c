@@ -64,11 +64,12 @@ int main(int argc, char **argv) {
 
 	int ch;
 	while (1) {
+		// Check if the file is empty already
 		if (feof(file)) {
 			break;
 		} else {
 			// Generate suffix
-			
+
 		}
 	}
 	
